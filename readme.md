@@ -1,69 +1,202 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## document
+- [laravel-jwt-exercise 문서](#laravel-jwt-exercise-문서)
+- [laravel-jwt-exerciseドキュメン](#laravel-jwt-exerciseドキュメン)
+- [laravel-jwt-exercise document](#laravel-jwt-exercise-document)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## laravel-jwt-exercise 문서
+이 프로젝트는 ```tymon/jwt-auth```를 라라벨(Laravel) 프로젝트에 적용한 예제입니다.
 
-## About Laravel
+### 개발 환경
+이 프로젝트는 앤서블(Ansible)과 라라독(Laradock)을 사용하여 만든 개발 환경에서 개발하고 테스트하였습니다. 앤서블(Ansible)과 라라독(Laradock)으로 만든 개발 환경이 궁금하신 분은 아래의 저장소(Repository)를 확인하세요.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+- dev-yakuza/laravel-devtool: <a href="https://github.com/dev-yakuza/laravel-devtool#laravel-devtool-%EC%82%AC%EC%9A%A9%EB%B2%95" target="_blank">https://github.com/dev-yakuza/laravel-devtool#laravel-devtool-%EC%82%AC%EC%9A%A9%EB%B2%95</a>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+위에서 소개한 저장소(Repository)에 대한 설명은 아래의 블로그를 확인하세요.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+- vagrant 설치 및 사용법: <a href="https://dev-yakuza.github.io/ko/environment/vagrant-install-and-usage/" target="_blank">https://dev-yakuza.github.io/ko/environment/vagrant-install-and-usage</a>
+- 앤서블 설치: <a href="https://dev-yakuza.github.io/ko/environment/install-ansible/" target="_blank">https://dev-yakuza.github.io/ko/environment/install-ansible</a>
+- 앤서블 플레이북: <a href="https://dev-yakuza.github.io/ko/environment/ansible-playbook/" target="_blank">https://dev-yakuza.github.io/ko/environment/ansible-playbook</a>
+- 앤서블&도커: <a href="https://dev-yakuza.github.io/ko/environment/ansible-docker/" target="_blank">https://dev-yakuza.github.io/ko/environment/ansible-docker</a>
+- 앤서블&라라독: <a href="https://dev-yakuza.github.io/ko/environment/ansible-laradock/" target="_blank">https://dev-yakuza.github.io/ko/environment/ansible-laradock</a>
+- 앤서블&라라벨: <a href="https://dev-yakuza.github.io/ko/environment/ansible-laravel/" target="_blank">https://dev-yakuza.github.io/ko/environment/ansible-laravel</a>
 
-## Learning Laravel
+### 사용 방법
+이 저장소(Repository)를 복사(Clone)합니다.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+```bash
+git clone https://github.com/dev-yakuza/laravel-jwt-exercise.git
+```
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+프로젝트에 필요한 미들웨어(Middleware)를 설치합니다.
 
-## Laravel Sponsors
+```bash
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+프로젝트의 환경 파일을 복사한 후 데이터베이스(Database)와 연결합니다. (데이터베이스와의 연결은 블로그를 참고해 주세요. - <a href="https://dev-yakuza.github.io/ko/environment/ansible-laravel/" target="_blank">앤서블&라라벨</a>)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
+```bash
+cp .env.example .env
+```
 
-## Contributing
+라라벨(Laravel)의 비밀키(Secret Key)를 생성합니다.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+jwt 인증 시스템의 비밀키(Secret Key)를 생성합니다.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan jwt:secret
+```
 
-## License
+라라벨(Laravel)의 사용자 테이블(User Table)을 생성합니다.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php artisan migrate
+```
+
+jwt의 사용방법은 아래에 내용을 참고하세요.
+
+### jwt의 사용방법
+이 저장소(Repository)를 생성하면서 만든 블로그가 있습니다. jwt 미들웨어(Middleware) 설치나 사용 방법에 대해서는 아래에 블로그를 확인해 주세요.
+
+- jwt 설치 및 설정: <a href="https://dev-yakuza.github.io/ko/laravel/jwt/" target="_blank">https://dev-yakuza.github.io/ko/laravel/jwt/</a>
+- jwt:회원가입: <a href="https://dev-yakuza.github.io/ko/laravel/jwt-signup/" target="_blank">https://dev-yakuza.github.io/ko/laravel/jwt-signup/</a>
+- jwt:로그인: <a href="https://dev-yakuza.github.io/ko/laravel/jwt-signin/" target="_blank">https://dev-yakuza.github.io/ko/laravel/jwt-signin/</a>
+- jwt:사용자 정보: <a href="https://dev-yakuza.github.io/ko/laravel/jwt-user-info/" target="_blank">https://dev-yakuza.github.io/ko/laravel/jwt-user-info/</a>
+- jwt:토큰 갱신: <a href="https://dev-yakuza.github.io/ko/laravel/jwt-refresh-token/" target="_blank">https://dev-yakuza.github.io/ko/laravel/jwt-refresh-token/</a>
+- jwt:로그아웃: <a href="https://dev-yakuza.github.io/ko/laravel/jwt-logout/" target="_blank">https://dev-yakuza.github.io/ko/laravel/jwt-logout/</a>
+
+## laravel-jwt-exerciseドキュメン
+このプロジェクトは```tymon/jwt-auth```をララベル(Laravel)プロジェクトに適用した例です。
+
+### 開発環境
+このプロジェクトはアンシブル(Ansible)とLaradock)を使って作った開発環境の上で開発してテストしました。アンシブル(Ansible)とLaradockで作った開発環境が知りたい方は下のリポジトリ(Repository)を確認してください。
+
+- dev-yakuza/laravel-devtool: <a href="https://github.com/dev-yakuza/laravel-devtool#laravel-devtool%E4%BD%BF%E3%81%84%E6%96%B9" target="_blank">https://github.com/dev-yakuza/laravel-devtool#laravel-devtool%E4%BD%BF%E3%81%84%E6%96%B9</a>
+
+上に紹介したリポジトリ(Repository)については下記のブログを確認してください。
+
+- vagrantインストールや使い方: <a href="https://dev-yakuza.github.io/environment/vagrant-install-and-usage/" target="_blank">https://dev-yakuza.github.io/environment/vagrant-install-and-usage</a>
+- アンシブルインストール: <a href="https://dev-yakuza.github.io/environment/install-ansible/" target="_blank">https://dev-yakuza.github.io/environment/install-ansible</a>
+- アンシブルプレイブック: <a href="https://dev-yakuza.github.io/environment/ansible-playbook/" target="_blank">https://dev-yakuza.github.io/environment/ansible-playbook</a>
+- アンシブル&ドッカー: <a href="https://dev-yakuza.github.io/environment/ansible-docker/" target="_blank">https://dev-yakuza.github.io/environment/ansible-docker</a>
+- アンシブル&Laradock: <a href="https://dev-yakuza.github.io/environment/ansible-laradock/" target="_blank">https://dev-yakuza.github.io/environment/ansible-laradock</a>
+- アンシブル&ララベル: <a href="https://dev-yakuza.github.io/environment/ansible-laravel/" target="_blank">https://dev-yakuza.github.io/environment/ansible-laravel</a>
+
+### 使い方
+このリポジトリ(Repository)をコピー(Clone)します。
+
+```bash
+git clone https://github.com/dev-yakuza/laravel-jwt-exercise.git
+```
+
+プロジェクトへ必要なミドルウェア(Middleware)をインストールします。
+
+```bash
+composer install
+```
+
+プロジェクトの環境ファイルをコピーした後データベース(Database)と連携します。(データベースとの連携についてはブログを確認してください。 - <a href="https://dev-yakuza.github.io/environment/ansible-laravel/" target="_blank">アンシブル&ララベル</a>)
+
+```bash
+cp .env.example .env
+```
+
+ララベル(Laravel)の秘密キー(Secret Key)を生成します。
+
+```bash
+php artisan key:generate
+```
+
+jwt認証システムの秘密キー(Secret Key)を生成します。
+
+```bash
+php artisan jwt:secret
+```
+
+ララベル(Laravel)のユーザテーブル(User Table)を生成します。
+
+```bash
+php artisan migrate
+```
+
+jwtの使い方は下を確認してください。
+
+### jwtの使い方
+このリポジトリ(Repository)を生成しながら作ったブログがあります。jwtミドルウェア(Middleware)のインストールや使い方は下記のブログを参考してください。
+
+- jwtインストールや設定: <a href="https://dev-yakuza.github.io/laravel/jwt/" target="_blank">https://dev-yakuza.github.io/laravel/jwt/</a>
+- jwt:会員登録: <a href="https://dev-yakuza.github.io/laravel/jwt-signup/" target="_blank">https://dev-yakuza.github.io/laravel/jwt-signup/</a>
+- jwt:ログイン: <a href="https://dev-yakuza.github.io/laravel/jwt-signin/" target="_blank">https://dev-yakuza.github.io/laravel/jwt-signin/</a>
+- jwt:ユーザ情報: <a href="https://dev-yakuza.github.io/laravel/jwt-user-info/" target="_blank">https://dev-yakuza.github.io/laravel/jwt-user-info/</a>
+- jwt:トークン更新: <a href="https://dev-yakuza.github.io/laravel/jwt-refresh-token/" target="_blank">https://dev-yakuza.github.io/laravel/jwt-refresh-token/</a>
+- jwt:ログアウト: <a href="https://dev-yakuza.github.io/laravel/jwt-logout/" target="_blank">https://dev-yakuza.github.io/laravel/jwt-logout/</a>
+
+## laravel-jwt-exercise document
+this project is an example to apply ```tymon/jwt-auth``` to Laravel.
+
+### Development Environment
+this project was developed and tested on the development environment which is consisted of Ansible and Laradock. if you want to know how to make the development environment by Ansible and Laradock, see below repository.
+
+- dev-yakuza/laravel-devtool: <a href="https://github.com/dev-yakuza/laravel-devtool#laravel-devtool-%EC%82%AC%EC%9A%A9%EB%B2%95" target="_blank">https://github.com/dev-yakuza/laravel-devtool#laravel-devtool-%EC%82%AC%EC%9A%A9%EB%B2%95</a>
+
+if you want to know details about above repository, see below blogs.
+
+- vagrant installation and usage: <a href="https://dev-yakuza.github.io/en/environment/vagrant-install-and-usage/" target="_blank">https://dev-yakuza.github.io/en/environment/vagrant-install-and-usage</a>
+- Ansible installation: <a href="https://dev-yakuza.github.io/en/environment/install-ansible/" target="_blank">https://dev-yakuza.github.io/en/environment/install-ansible</a>
+- Ansible Playbook: <a href="https://dev-yakuza.github.io/en/environment/ansible-playbook/" target="_blank">https://dev-yakuza.github.io/en/environment/ansible-playbook</a>
+- Ansible&Docker: <a href="https://dev-yakuza.github.io/en/environment/ansible-docker/" target="_blank">https://dev-yakuza.github.io/en/environment/ansible-docker</a>
+- Ansible&Laradock: <a href="https://dev-yakuza.github.io/en/environment/ansible-laradock/" target="_blank">https://dev-yakuza.github.io/en/environment/ansible-laradock</a>
+- Ansible&Laravel: <a href="https://dev-yakuza.github.io/en/environment/ansible-laravel/" target="_blank">https://dev-yakuza.github.io/en/environment/ansible-laravel</a>
+
+### How To Use
+first, clone this repository.
+
+```bash
+git clone https://github.com/dev-yakuza/laravel-jwt-exercise.git
+```
+
+install middlewares those this project requires.
+
+```bash
+composer install
+```
+
+copy the project environment file and connect the database. (if you want to know how to connect database, see the blog post. - <a href="https://dev-yakuza.github.io/en/environment/ansible-laravel/" target="_blank">Ansible&Laravel</a>)
+
+```bash
+cp .env.example .env
+```
+
+create the secret key of Laravel.
+
+```bash
+php artisan key:generate
+```
+
+create the secret key of jwt authentication system.
+
+```bash
+php artisan jwt:secret
+```
+
+create the user table of Laravel.
+
+```bash
+php artisan migrate
+```
+
+see below about how to use jwt.
+
+### How To Use JWT
+we've made blogs when we're creating this repository. if you want to know how to install jwt middleware or how to use jwt, see below blog posts.
+
+- jwt installation&settings: <a href="https://dev-yakuza.github.io/en/laravel/jwt/" target="_blank">https://dev-yakuza.github.io/en/laravel/jwt/</a>
+- jwt:signup: <a href="https://dev-yakuza.github.io/en/laravel/jwt-signup/" target="_blank">https://dev-yakuza.github.io/en/laravel/jwt-signup/</a>
+- jwt:signin: <a href="https://dev-yakuza.github.io/en/laravel/jwt-signin/" target="_blank">https://dev-yakuza.github.io/en/laravel/jwt-signin/</a>
+- jwt:user information: <a href="https://dev-yakuza.github.io/en/laravel/jwt-user-info/" target="_blank">https://dev-yakuza.github.io/en/laravel/jwt-user-info/</a>
+- jwt:refresh token: <a href="https://dev-yakuza.github.io/en/laravel/jwt-refresh-token/" target="_blank">https://dev-yakuza.github.io/en/laravel/jwt-refresh-token/</a>
+- jwt:logout: <a href="https://dev-yakuza.github.io/en/laravel/jwt-logout/" target="_blank">https://dev-yakuza.github.io/en/laravel/jwt-logout/</a>
